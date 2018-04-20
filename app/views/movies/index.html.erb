@@ -1,0 +1,5 @@
+<h1>Movies</h1>
+<% @movies.each do |m| %>
+	<h1>Title: <%= @client.get_movie_title(m.movie_id)%></h1>
+	<%= link_to image_tag(@client.get_poster_path(m.movie_id)), show_path(id: m.movie_id)%>
+<% end %>
